@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/login_logo.png">
+	<link rel="stylesheet" href="css/login.css">
+	<title>Login page</title>
+</head>
+<body>
+	<main>
+		<div class="Successful">
+			<div class="Successful-content">
+				<img src="images/successful.png" alt="">
+				<p>Đăng nhập thành công</p>
+				<a href="pages_admin/admin_home.html"><button>OK</button></a>
+			</div>
+		</div>
+		<form action="#" id="Form-login" onsubmit="return(checkLogin())">
+			<div class="Title-form">
+				<h1>Login Form</h1>
+			</div>
+			<div class="User-name">
+				<input type="text" name="Input-user-name" id="Input-user-name" placeholder="User name" autocomplete="off" required>
+			</div>
+			<div class="Password">
+				<input type="password" name="Input-password" id="Input-password" placeholder="Password" required>
+			</div>
+			<div class="Button-login">
+				<button type="submit" id="Login">Login</button>
+			</div>
+		</form>
+		<div class="Failed">
+			<div class="Failed-content">
+				<img src="images/failed.png" alt="">
+				<p>Tên đăng nhập hoặc mật khẩu không chính xác</p>
+				<button>OK</button>
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

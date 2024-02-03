@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="icon" href="../images/admin_logo.png">
+	<link rel="stylesheet" href="../css/admin.css">
+	<link rel="stylesheet" href="../css/admin_responsive.css">
+	<title>Admin page</title>
+</head>
+<body>
+	<nav class="admin_information">
+		<div class="User">
+				<div class="Avatar">
+					<img src="../images/avatar.png" alt="">
+				</div>
+				<div class="Name-user">
+					<h3>admin</h3>
+				</div>
+			
+		</div>
+		<ul class="navbar">
+			<li class="navbar-item">
+				<a href="admin_home.html"><i class="fa-solid fa-house-user"></i>Home</a>
+			</li>
+			<li class="navbar-item">
+				<a href="admin_add_account.html">Account management</a>
+			</li>
+			
+			<li class="navbar-item">
+				<a href="admin_manager.html" style="color: #68e0cf;">CV management</a>
+			</li>
+
+			<li class="navbar-item">
+				<a href="../../introduce.html">Introduction</a></li>
+			<li class="navbar-item">	
+				<a href="../login.html">Logout</a></li>
+		</ul>
+		<div class="navbar_menu_mobile">
+            <a href="#" class="mobile_link_bars"><i class="fa-solid fa-bars"></i></a>
+            <a href="#" class="mobile_link_xmark"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+	</nav>
+	<main style="display: flex; justify-content: center;" >
+        <div class="content_cv_manager">
+                <h1>CV Manager <i class="fa-solid fa-screwdriver-wrench"></i></h1>
+                <ul class="list">
+                    <li class="item"><a href="cv_admin_aboutme.html"> About Me</a></li>
+                    <li class="item"><a href="cv_admin_work_experience.html"> Work Experience</a></li>
+                    <li class="item"><a href="cv_admin_education.html"> Education</a></li>
+                </ul>
+        </div>
+    </main>
+	<script src="../js/admin_home.js"></script>
+</body>
+</html>

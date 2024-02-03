@@ -1,0 +1,319 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: white;
+	font-family: sans-serif;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+body{
+	height: 100vh;
+	display: flex;
+}
+
+.Navbar-container{
+	background-color: #40574ef6;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Title-navbar{
+	margin: 20px 0;
+}
+
+.User-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.Avatar-container{
+	width: 47px;
+	height: 47px;
+	background-color: rgba(255, 255, 255, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.Avatar-user{
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.Avatar-user>img{
+	width: 100%;
+}
+
+.Name-user{
+	text-align: center;
+}
+
+.Btn-navigation{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.Btn-navigation a{
+	background-color: #323436;
+	padding: 10px;
+	border-radius: 50px;
+}
+
+.Btn-navigation .Btn-log-out{
+	margin-right: 3px;
+}
+
+.Btn-navigation .Btn-return-home-page{
+	margin-left: 3px;
+}
+
+.Accordion-container{
+	width: 100%;
+	margin-top: 25px;
+}
+
+.Accordion-father-item{
+	position: relative;
+}
+
+.Accordion-father-item input{
+	display: none;
+}
+
+.Accordion-father-item label{
+	height: 40px;
+	display: flex;
+	flex-shrink: 100%;
+	align-items: center;
+	padding-left: 15px;
+}
+
+.Accordion-father-item label:not(.first)::after{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-right: 3px solid white;
+	border-bottom: 3px solid white;
+	transform: rotate(45deg);
+	top: 10px;
+	right: 15px;
+	transition: 1s;
+}
+
+.Accordion-father-item label:hover{
+	background-color: #07500d;
+}
+
+.Accordion-father-item label i{
+	margin-right: 10px;
+}
+
+.Accordion-child-item{
+	display: none;
+	margin: 3px 0;
+}
+
+.Accordion-child-item>div{
+	position: relative;
+}
+
+.Accordion-child-item>div::before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	border-left: 2px solid white;
+	left: 30px;
+}
+
+.Accordion-child-item a{
+	height: 35px;
+	padding-left: 45px;
+	display: flex;
+	flex-shrink: 100%;
+	align-items: center;
+	margin: 3px 0;
+}
+
+.Accordion-child-item a:hover{
+	background-color: #07473f;
+}
+
+.Accordion-child-item a::before{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	border: 3px solid white;
+	left: 28px;
+}
+
+.Accordion-child-item .activate{
+	background-color: #415e50;
+}
+
+.Accordion-father-item input:checked ~ label,
+.Label-activate{
+	background-color: #116e62;
+}
+
+.Accordion-father-item input:checked ~ .Accordion-child-item{
+	display: block;
+	animation: Accordion_child_animation 2s;
+}
+
+.Accordion-father-item input:checked ~ label::after{
+	transform: rotate(225deg);
+	top: 15px;
+}
+
+main{
+	background-color: #0c7148;
+	flex: 4;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.Title-main{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	background-color: #54b07d;
+	justify-content: center;
+}
+
+.Title-main h1{
+	margin-left: 10px;
+	align-items: center;
+	
+	
+}
+
+.Content{
+	width: 100%;
+	height: calc(100vh - 40px);
+	display: flex;
+	flex-direction: column;
+}
+
+.Background-home-admin{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Form-registered,
+.Form-edit-account{
+	display: flex;
+	flex-basis: 100%;
+	justify-content: space-around;
+	align-items: center;
+	padding: 35px 0;
+}
+
+.Input-user-name input,
+.Input-password input{
+	height: 40px;
+	color: #434a54;
+	font-size: 1rem;
+	padding: 6px 12px;
+    background-color: #f8f9fa;
+    background-clip: padding-box;
+    border: 2px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+
+.Input-user-name input:focus,
+.Input-password input:focus{
+	outline: 0;
+	border-color: #a5c4ee;
+}
+
+.Form-registered button,
+.Form-edit-account button{
+	width: 60px;
+	height: 30px;
+	color: #404040;
+	cursor: pointer;
+	padding: 4px 5px 3px 5px;
+	border: 0;
+	border-radius: 5px;
+}
+
+.Form-registered button:active,
+.Form-edit-account button:active,
+.Column-edit button:active{
+	color: white;
+	background-color: #00384d;
+}
+
+.Title-show-list-account{
+	width: 100%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #00384d;
+}
+
+.Show-list-account table{
+	border-collapse: collapse;
+	display: flex;
+	flex-direction: column;
+}
+
+.Show-list-account table tr{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
+.Show-list-account table tr th:not(.Column-edit),
+.Show-list-account table tr td:not(.Column-edit){
+	flex-basis: 100%;
+	border: 1px solid #009999;
+	padding: 3px 0;
+}
+
+.Column-edit{
+	flex-basis: 20%;
+	border: 1px solid #009999;
+	padding: 3px 0;
+}
+
+.Column-edit button{
+	width: 60px;
+	height: auto;
+	color: #404040;
+	cursor: pointer;
+	border: 0;
+	border-radius: 5px;
+}
+
+@keyframes Accordion_child_animation{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}

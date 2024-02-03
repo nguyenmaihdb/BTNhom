@@ -1,0 +1,124 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body{
+	background-color: #99ccff;
+}
+
+main{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#Form-login{
+	width: 300px;
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+
+#Form-login>div{
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+
+.Title-form{
+	color: #434a54;
+	margin: 10px 0;
+}
+
+.User-name, .Password{
+	margin: 5px 0;
+}
+
+.Button-login{
+	margin: 5px 0 10px 0;
+}
+
+input{
+	height: 40px;
+	color: #434a54;
+	font-size: 1rem;
+	padding: 6px 12px;
+    background-color: #f8f9fa;
+    background-clip: padding-box;
+    border: 2px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+
+input:focus{
+	outline: 0;
+	color: #434a54;
+	background-color: #fff;
+	border-color: #a5c4ee;
+	box-shadow: 0 0 0 0.25rem rgb(74 137 220 / 25%);
+}
+
+button{
+	width: 60px;
+	height: 30px;
+	color: #404040;
+	cursor: pointer;
+	padding: 4px 5px 3px 5px;
+	border: 0;
+	border-radius: 5px;
+}
+
+.Button-login button, .Successful-content button{
+	background-color: #66b3ff;
+}
+
+.Failed button{
+	background-color: #ff6666;
+}
+
+.Button-login button:hover, .Successful-content button:hover{
+	background-color: #3399ff;
+}
+
+.Failed button:hover{
+	background-color: #ff5050;
+}
+
+.Button-login button:focus, .Successful-content button:focus{
+	color: white;
+	background-color: #0066ff;
+}
+
+.Failed button:focus{
+	color: white;
+	background-color: #ff0000;
+}
+
+.Successful, .Failed{
+	position: absolute;
+	display: none;
+	opacity: 0;
+	transition: 0.85s;
+}
+
+
+.Successful-content, .Failed-content{
+	width: 400px;
+	height: 350px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	border-radius: 5px;
+}
+
+.Successful-content img, .Failed-content img{
+	width: 200px;
+}
